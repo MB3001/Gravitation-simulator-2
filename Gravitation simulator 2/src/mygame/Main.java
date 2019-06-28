@@ -52,7 +52,7 @@ public class Main extends SimpleApplication {
 
     static {
         /**
-         * Initialize the cannon ball geometry
+         * Initialize the cannon ball geometry.
          */
         sphere = new Sphere(32, 32, 0.4f, true, false);
         sphere.setTextureMode(TextureMode.Projected);
@@ -61,7 +61,7 @@ public class Main extends SimpleApplication {
     @Override
     public void simpleInitApp() {
         /**
-         * Set up Physics Game
+         * Set up Physics Game.
          */
         bulletAppState = new BulletAppState();
         stateManager.attach(bulletAppState);
