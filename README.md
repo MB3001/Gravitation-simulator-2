@@ -12,13 +12,13 @@ You can play it directly by opening "MyGame.jar" in the "dist" folder.
 It is built with JMonkeyEngine (http://jmonkeyengine.org/).
 
 In the line 36 of Main.java are the physical variables, if you are interested in changing them.
-
+     
     /**
      * Prepare physics.
      */
-    float velocity = 2f;
     float gravitational_constant = 10f;
-    float canonball_mass = 1;
+    float canonball_speed = 2f;
+    float canonball_mass = 1f;
 
 If you want to know directly what is the block of code that does the magic of gravitation, I'll throw the spoiler at you:
 
