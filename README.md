@@ -11,4 +11,19 @@ You can play it directly by opening "MyGame.jar" in the "dist" folder.
 
 It is built with JMonkeyEngine (http://jmonkeyengine.org/).
 
+If you want to know directly what is the block of code that does the magic of gravitation, I'll throw the spoiler at you:
+
+        for (PhysicsRigidBody attractor : bulletAppState.getPhysicsSpace().getRigidBodyList()) {
+
+            for (PhysicsRigidBody attracted : bulletAppState.getPhysicsSpace().getRigidBodyList()) {
+                if (attractor != attracted) {
+                    attracted.applyCentralForce(
+                            (attractor.getPhysicsLocation().subtract(attracted.getPhysicsLocation()))
+                                    .normalize().mult(gravitational_constant * attractor.getMass() * attracted.getMass()
+                                            / attracted.getPhysicsLocation().distanceSquared(attractor.getPhysicsLocation())));
+                }
+            }
+        }
+
+
 Author: Matías Bonino
