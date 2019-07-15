@@ -135,8 +135,8 @@ public class Main extends SimpleApplication {
                     + "\nCamera direction: " + cam.getDirection()
                     + "\nAmount of cannonballs created: " + quantity
                     + "\nGravitational constant: " + gravitational_constant
-                    + "\nCannon ball initial velocity: " + canonball_speed
-                    + "\nCannon ball mass: " + canonball_mass
+                    + "\nCannonball initial speed: " + canonball_speed
+                    + "\nCannonball mass: " + canonball_mass
             );
             hudText.setLocalTranslation(300, hudText.getLineHeight() * 6, 0); // position
             guiNode.attachChild(hudText);
