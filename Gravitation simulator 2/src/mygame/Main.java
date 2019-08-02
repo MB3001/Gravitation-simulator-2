@@ -37,8 +37,8 @@ public class Main extends SimpleApplication {
      * Prepare physics.
      */
     float gravitational_constant = 10f;
-    float canonball_speed = 2f;
-    float canonball_mass = 1f;
+    float cannonball_speed = 2f;
+    float cannonball_mass = 1f;
 
     /**
      * Prepare HUD.
@@ -96,7 +96,7 @@ public class Main extends SimpleApplication {
         rootNode.attachChild(ball_geo);
 
         ball_geo.setLocalTranslation(cam.getLocation());
-        ball_phy = new RigidBodyControl(canonball_mass);
+        ball_phy = new RigidBodyControl(cannonball_mass);
 
         ball_geo.addControl(ball_phy);
         bulletAppState.getPhysicsSpace().add(ball_phy);
@@ -104,7 +104,7 @@ public class Main extends SimpleApplication {
 
         quantity++;
 
-        ball_phy.setLinearVelocity(cam.getDirection().mult(canonball_speed));
+        ball_phy.setLinearVelocity(cam.getDirection().mult(cannonball_speed));
     }
 
     @Override
@@ -135,8 +135,8 @@ public class Main extends SimpleApplication {
                     + "\nCamera direction: " + cam.getDirection()
                     + "\nAmount of cannonballs created: " + quantity
                     + "\nGravitational constant: " + gravitational_constant
-                    + "\nCannonball initial speed: " + canonball_speed
-                    + "\nCannonball mass: " + canonball_mass
+                    + "\nCannonball initial speed: " + cannonball_speed
+                    + "\nCannonball mass: " + cannonball_mass
             );
             hudText.setLocalTranslation(300, hudText.getLineHeight() * 6, 0); // position
             guiNode.attachChild(hudText);
