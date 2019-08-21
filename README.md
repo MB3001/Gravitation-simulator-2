@@ -17,8 +17,8 @@ In the line 36 of Main.java are the physical variables, if you are interested in
      * Prepare physics.
      */
     float gravitational_constant = 10f;
-    float canonball_speed = 2f;
-    float canonball_mass = 1f;
+    float cannonball_speed = 2f;
+    float cannonball_mass = 1f;
 
 If you want to know directly what is the block of code that does the magic of gravitation, I'll throw the spoiler at you:
 
